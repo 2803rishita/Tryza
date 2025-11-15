@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Styles – TRYZA</title>
+    <style>
+        /* Overall page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url('/Users/rishitajain/Desktop/tryzaaa/tryza proj/Festival Styles/images fest/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #333;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #dc15a7;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        /* Section containing categories */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Category item styling */
+        .category {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            text-align: center;
+            color: #ec1eb2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effect on category */
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Category text styling */
+        .category-item {
+            font-size: 1.2rem;
+            color: #ec1eb2;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+
+        /* Category image styling with equal dimensions */
+        .category-image {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Hover effect on image */
+        .category:hover .category-image {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="festival-styles-page">
+        <header>
+            <h1>✨ Festive Fables – Drape yourself in stories of tradition!</h1>
+        </header>
+        <section class="categories">
+            
+            <div class="category"><a href="#" class="category-link"><img src="image2/14.png" alt="national festival" class="category-image">national festival</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/1.png" alt="Diwali Special" class="category-image">Diwali Special</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/7.png" alt="Navratri Look" class="category-image">Navratri Look</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/8.png" alt="Eid Collection" class="category-image">Eid Collection</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/2.png" alt="Holi Colors" class="category-image">Holi Colors</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/6.png" alt="Durga Pooja Edit" class="category-image">Durga Pooja Edit</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/10.png" alt="Rakhi Outfit" class="category-image">Rakhi Outfit</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/9.png" alt="Christmas Cheer" class="category-image">Christmas Cheer</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/13.png" alt="Sankranti Fits" class="category-image">Sankranti Fits</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/5.png" alt="Karwa Chauth Look" class="category-image">Karwa Chauth Look</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/11.png" alt="Dussehra Dress Up" class="category-image">Dussehra Dress Up</a></div>
+            <div class="category"><a href="#" class="category-link"><img src="image2/12.png" alt="Lohri Vibes" class="category-image">Lohri Vibes</a></div>
+        </section>
+    </div>
+</body>
+</html>

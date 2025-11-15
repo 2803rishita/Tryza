@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRYZA - Your Fashion, Your Way</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 400px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        h2, h3 {
+            color: #ff4f72;
+            font-weight: 600;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        .btn {
+            background: #ff4f72;
+            color: #fff;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #e04365;
+            transform: scale(1.05);
+        }
+        .questionnaire, .welcome-screen {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .welcome-message {
+            font-size: 18px;
+            color: #333;
+            font-weight: 400;
+        }
+    </style>
+    <script>
+        function showQuestions() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('questionnaire').style.display = 'block';
+        }
+
+        function submitProfile(event) {
+            event.preventDefault();
+            document.getElementById('questionnaire').style.display = 'none';
+            document.getElementById('welcome-screen').style.display = 'block';
+            setTimeout(() => { window.location.href = 'homepage.html'; }, 3000);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to TRYZA 👗✨</h2>
+        <p style="color: #555;">Your Personalized Fashion Hub</p>
+        
+        <form id="login-form" onsubmit="event.preventDefault(); showQuestions();">
+            <div class="input-group">
+                <input type="text" placeholder="Username or Email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Start Your Style Journey</button>
+        </form>
+        
+        <div id="questionnaire" class="questionnaire">
+            <h3>Let's Personalize Your Experience ✨</h3>
+            <form onsubmit="submitProfile(event)">
+                <div class="input-group">
+                    <label for="style">Your Style Vibe:</label>
+                    <select id="style">
+                        <option>Casual & Chill</option>
+                        <option>Boss Mode (Formal)</option>
+                        <option>Royal Ethnic</option>
+                        <option>Street Trendsetter</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="color">Go-To Fashion Color:</label>
+                    <input type="text" id="color" placeholder="Type your fav color">
+                </div>
+                <div class="input-group">
+                    <label for="fit">What Fit Feels Like You?</label>
+                    <select id="fit">
+                        <option>Perfectly Tailored</option>
+                        <option>Slim & Sleek</option>
+                        <option>Oversized & Comfy</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="occasion">Shopping For:</label>
+                    <select id="occasion">
+                        <option>Daily Vibes</option>
+                        <option>Office Chic</option>
+                        <option>Party Nights</option>
+                        <option>Festive Glam</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Create My Fashion Profile</button>
+            </form>
+        </div>
+        
+        <div id="welcome-screen" class="welcome-screen">
+            <h3>🎉 Welcome to TRYZA, Fashion Star! 🎉</h3>
+            <p class="welcome-message">We’ve tailored a style universe just for you. Get ready to explore fashion that fits YOU!</p>
+        </div>
+    </div>
+</body>
+</html>

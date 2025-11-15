@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Wear - TRYZA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('images4/bg.png') no-repeat center center/cover;
+            color: #ffffff;
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 150px;
+            background: rgba(0, 0, 0, 0.521);
+            height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            text-align: left;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #ff8c00da;
+        }
+
+        .sidebar label {
+            font-size: 1rem;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .sidebar input {
+            margin-right: 10px;
+        }
+
+        /* Main content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 30px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.274);
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+        }
+
+        /* Categories Grid */
+        .categories {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .category {
+            background: rgba(255, 255, 255, 0.9);
+            color: #2A3D45;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .category:hover {
+            background: #ffd90000;
+            color: black;
+        }
+
+        .category img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar with filters -->
+    <div class="sidebar">
+        <h2>Filters</h2>
+        <label><input type="radio" name="gender"> Men</label>
+        <label><input type="radio" name="gender"> Women</label>
+        <label><input type="radio" name="gender"> Unisex</label>
+
+        <h2>Color</h2>
+        <label><input type="radio" name="color"> Black</label>
+        <label><input type="radio" name="color"> White</label>
+        <label><input type="radio" name="color"> Blue</label>
+
+        <h2>Price Range</h2>
+        <label><input type="radio" name="price"> ₹1000 - ₹3000</label>
+        <label><input type="radio" name="price"> ₹3000 - ₹5000</label>
+        <label><input type="radio" name="price"> ₹5000+</label>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="hero-section">
+            <h1>Office Wear Collection</h1>
+            <p>Dress smart, feel confident, and own your workplace!</p>
+        </div>
+
+        <div class="categories">
+            <div class="category" onclick="window.location.href='formal_wear.html'">
+                <img src="images4/2.png" alt="Formal Wear">
+                <strong>Formal Wear</strong>
+            </div>
+            <div class="category" onclick="window.location.href='business_casuals.html'">
+                <img src="images4/5.png" alt="Business Casuals">
+                <strong>Business Casuals</strong>
+            </div>
+            <div class="category" onclick="window.location.href='power_dressing.html'">
+                <img src="images4/4.png" alt="Power Dressing">
+                <strong>Power Dressing</strong>
+            </div>
+            <div class="category" onclick="window.location.href='comfortable_workwear.html'">
+                <img src="images4/3.png" alt="Comfortable Workwear">
+                <strong>Comfortable Workwear</strong>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

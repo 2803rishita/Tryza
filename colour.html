@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TRYZA Color AI Assistant</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #f0f4f8);
+      color: #333;
+    }
+    header {
+      padding: 1.5rem;
+      text-align: center;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #6c63ff;
+    }
+    .container {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    video, canvas {
+      width: 300px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    button {
+      margin: 1rem;
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #6c63ff;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #5848d6;
+    }
+    #recommendations {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .color-card {
+      background: white;
+      padding: 1rem;
+      margin: 0.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 280px;
+    }
+    .dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎨 TRYZA Color AI Assistant</h1>
+    <p>Live skin tone detection & smart color suggestions</p>
+  </header>
+
+  <div class="container">
+    <video id="video" autoplay muted></video>
+    <canvas id="canvas" width="300" height="225" style="display:none;"></canvas>
+    <div>
+      <button onclick="detectSkinTone()">Get My Colors</button>
+    </div>
+
+    <div id="recommendations"></div>
+  </div>
+
+  <script>
+    const video = document.getElementById("video");
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    async function initCamera() {
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+      video.srcObject = stream;
+    }
+
+    function getAverageRGB(data, w, h) {
+      let r = 0, g = 0, b = 0;
+      const pixelCount = w * h;
+      for (let i = 0; i < pixelCount * 4; i += 4) {
+        r += data[i];
+        g += data[i + 1];
+        b += data[i + 2];
+      }
+      return [Math.round(r / pixelCount), Math.round(g / pixelCount), Math.round(b / pixelCount)];
+    }
+
+    function mapRGBtoTone(r, g, b) {
+      const brightness = (r + g + b) / 3;
+      if (brightness > 220) return "Fair";
+      if (brightness > 170) return "Medium";
+      if (brightness > 130) return "Olive";
+      if (brightness > 90) return "Tan";
+      return "Deep";
+    }
+
+    function detectSkinTone() {
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+      const imageData = ctx.getImageData(120, 80, 60, 60).data; // central square
+      const [r, g, b] = getAverageRGB(imageData, 60, 60);
+      const tone = mapRGBtoTone(r, g, b);
+      showRecommendations(tone);
+    }
+
+    function showRecommendations(tone) {
+      const suggestions = {
+        Fair: ["Peach", "Lavender", "Sky Blue", "Mint", "Rose"],
+        Medium: ["Olive", "Coral", "Dusty Blue", "Mauve", "Teal"],
+        Olive: ["Maroon", "Navy", "Mustard", "Blush", "Olive"],
+        Tan: ["Gold", "Rust", "Forest Green", "Ivory", "Copper"],
+        Deep: ["Emerald", "Plum", "Burgundy", "Charcoal", "Cocoa"]
+      };
+
+      const output = document.getElementById("recommendations");
+      output.innerHTML = `<h2>Recommended Colors for ${tone} Skin Tone</h2>`;
+
+      suggestions[tone].forEach(color => {
+        const div = document.createElement("div");
+        div.className = "color-card";
+        div.innerHTML = `
+          <div class="dot" style="background:${color.toLowerCase()}"></div>
+          <span>${color}</span>
+        `;
+        output.appendChild(div);
+      });
+    }
+
+    initCamera();
+  </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tryza Wedding Wear</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+    }
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+    .sidebar {
+      width: 250px;
+      padding: 20px;
+      border-right: 1px solid #ddd;
+    }
+    .products {
+      flex: 1;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-card {
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      background: #fafafa;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .product-card button {
+      margin-top: 10px;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .search-bar {
+      width: 100%;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #ddd;
+    }
+    .search-bar input[type="text"] {
+      width: 50%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for wedding outfits..." />
+  </div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h3>Filters</h3>
+      <p><strong>Category:</strong></p>
+      <label><input type="checkbox" /> Bride</label><br />
+      <label><input type="checkbox" /> Groom</label><br />
+      <p><strong>Color:</strong></p>
+      <label><input type="checkbox" /> Red</label><br />
+      <label><input type="checkbox" /> Gold</label><br />
+      <label><input type="checkbox" /> White</label><br />
+      <p><strong>Size:</strong></p>
+      <label><input type="checkbox" /> S</label><br />
+      <label><input type="checkbox" /> M</label><br />
+      <label><input type="checkbox" /> L</label><br />
+    </div>
+
+    <div class="products">
+      <!-- Product Cards -->
+      <div class="product-card">
+        <img src="/Users/rishitajain/Desktop/tryzaaa/tryza/image3/wed4.png alt="Dress 1" />
+        <p>Bride Lehenga 1</p>
+        <p>250</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress2.jpg" alt="Dress 2" />
+        <p>Bride Lehenga 2</p>
+        <p>300</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress3.jpg" alt="Dress 3" />
+        <p>Bride Saree</p>
+        <p>180</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress4.jpg" alt="Dress 4" />
+        <p>Groom Sherwani</p>
+        <p>350</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress5.jpg" alt="Dress 5" />
+        <p>Groom Suit</p>
+        <p>$220</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress6.jpg" alt="Dress 6" />
+        <p>Bride Gown</p>
+        <p>200</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress7.jpg" alt="Dress 7" />
+        <p>Bride Anarkali</p>
+        <p>270</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress8.jpg" alt="Dress 8" />
+        <p>Groom Indo-Western</p>
+        <p>310</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress9.jpg" alt="Dress 9" />
+        <p>Bride Floral Lehenga</p>
+        <p>290</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress10.jpg" alt="Dress 10" />
+        <p>Groom Traditional Dhoti</p>
+        <p>180</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress11.jpg" alt="Dress 11" />
+        <p>Bride Saree - Silk</p>
+        <p>210</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress12.jpg" alt="Dress 12" />
+        <p>Bride Modern Dress</p>
+        <p>260</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress13.jpg" alt="Dress 13" />
+        <p>Groom Kurta Set</p>
+        <p>$190</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress14.jpg" alt="Dress 14" />
+        <p>Bride Mirror Work Lehenga</p>
+        <p>320</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress15.jpg" alt="Dress 15" />
+        <p>Groom Pathani Suit</p>
+        <p>210</p>
+        <button>Try Now</button>
+        
+      </div>
+        <div class="product-card">
+        <img src="dress1.jpg" alt="Dress 16" />
+        <p>Bride Lehenga 1</p>
+        <p>250</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress2.jpg" alt="Dress 17" />
+        <p>Bride Lehenga 2</p>
+        <p>300</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress3.jpg" alt="Dress 18" />
+        <p>Bride Saree</p>
+        <p>180</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress4.jpg" alt="Dress 19" />
+        <p>Groom Sherwani</p>
+        <p>350</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress5.jpg" alt="Dress 20" />
+        <p>Groom Suit</p>
+        <p>$220</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress6.jpg" alt="Dress 21" />
+        <p>Bride Gown</p>
+        <p>200</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress7.jpg" alt="Dress 22" />
+        <p>Bride Anarkali</p>
+        <p>270</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress8.jpg" alt="Dress 23" />
+        <p>Groom Indo-Western</p>
+        <p>310</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress9.jpg" alt="Dress 24" />
+        <p>Bride Floral Lehenga</p>
+        <p>290</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress10.jpg" alt="Dress 25" />
+        <p>Groom Traditional Dhoti</p>
+        <p>180</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress11.jpg" alt="Dress 26" />
+        <p>Bride Saree - Silk</p>
+        <p>210</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress12.jpg" alt="Dress 27" />
+        <p>Bride Modern Dress</p>
+        <p>260</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress13.jpg" alt="Dress 28" />
+        <p>Groom Kurta Set</p>
+        <p>$190</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress14.jpg" alt="Dress 29" />
+        <p>Bride Mirror Work Lehenga</p>
+        <p>320</p>
+        <button>Try Now</button>
+      </div>
+      <div class="product-card">
+        <img src="dress15.jpg" alt="Dress 30" />
+        <p>Groom Pathani Suit</p>
+        <p>210</p>
+        <button>Try Now</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRYZA</title>
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Default Light Theme */
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #000;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s;
+        }
+
+        .dark-mode .navbar {
+            background-color: #333;
+        }
+
+        .logo {
+            font-size: 36px; /* Change to 24px if needed */
+            font-weight: bold;
+            color: #e60073;
+            margin-right: 15px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color:#1a1a1a;
+            font-size: 14px;
+            padding: 5px 10px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #e60073;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            max-width: 300px; /* Increased width */
+            margin: 0 15px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px; /* Slightly larger padding */
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .icon-btn, .toggle-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #e60073; /* Set to black */
+        }
+
+        .icon-btn i, .toggle-btn i {
+            font-size: 18px;
+        }
+
+        .icon-btn:hover i, .toggle-btn:hover i {
+            color: #e60073;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">TRYZA</div>
+        <div class="nav-links">
+            <a href="wed.html">Wedding Special</a>
+            <a href="fest.html">Festive special</a>
+            <a href="office.html">Office Wear</a>
+            <a href="party wear.html">party wear</a>
+            <a href="personalized.html">Personalized for You</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+        </div>
+        <div class="nav-icons">
+            <a href="wishlist.html" class="icon-btn"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" class="icon-btn"><i class="fas fa-shopping-cart"></i></a>
+            <a href="profile.html" class="icon-btn"><i class="fas fa-user"></i></a>
+            <button class="toggle-btn" onclick="toggleDarkMode()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+       <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+        }
+
+        .hero {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            width: 500%; /* 5 slides */
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .slide-content {
+            text-align: center;
+            background: none;
+            padding: 15px;
+            width: 100%;
+        }
+
+        .slide-content h2 {
+            font-size: 20px;
+            color: #e60073;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            background: #e60073;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #c40063;
+        }
+
+        .dots {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            margin: 5px;
+            background: gray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .dot.active {
+            background: #e60073;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="slides">
+            <div class="slide" onclick="location.href='#tryon'">
+                <img src="image/hero.1.png" alt="Virtual Try-On">
+                <div class="slide-content">
+                    <h2>Virtual Try-On - Try Before You Buy</h2>
+                </div>
+            </div>
+            <div class="slide" onclick="location.href='#stylist'">
+                <img src="image/hero2.png" alt="AI Stylist">
+                <div class="slide-content">
+                    <h2>AI-Powered Stylist - Personalized Looks</h2>
+                </div>
+            </div>
+            <div class="slide" onclick="location.href='#size'">
+                <img src="image/hero4.png" alt="Size Assist">
+                <div class="slide-content">
+                    <h2>Perfect Fit - Accurate Size Assistance</h2>
+                </div>
+            </div>
+            <div class="slide" onclick="location.href='colour.html'">
+                <img src="image/hero5.png" alt="Color Suggestion">
+                <div class="slide-content">
+                    <h2>Suggest Perfect Colour</h2>
+                </div>
+            </div>
+            <div class="slide" onclick="location.href='#checkout'">
+                <img src="image/hero3.png" alt="Secure Checkout">
+                <div class="slide-content">
+                    <h2>Secure Checkout - Shop with Confidence</h2>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+    
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        
+        function showSlide(index) {
+            slideIndex = index;
+            slides.style.transform = `translateX(-${index * 100}vw)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+    
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % 5;
+            showSlide(slideIndex);
+        }
+    
+        function currentSlide(index) {
+            showSlide(index);
+        }
+    
+        setInterval(nextSlide, 4000); // Auto-play every 4 seconds
+    </script>
+    
+    <style>
+        .slide {
+            cursor: pointer;
+        }
+    </style>
+            <section>
+                <h2 class="section-header">CityTrend Alert: What’s Making Waves Near You!</h2>
+                <div class="trending-slider">
+                    <div class="slider-wrapper">
+                        <!-- Mumbai -->
+                        <a href="trends/mumbai.html" class="trend-link">
+                            <div class="trend-card" data-city="Mumbai">
+                                <video autoplay loop muted>
+                                    <source src="image/city1.mp4" type="video/mp4">
+                                </video>
+                                <h3>Mumbai’s Streetwear Craze</h3>
+                            </div>
+                        </a>
+                        <!-- Delhi -->
+                        <a href="trends/delhi.html" class="trend-link">
+                            <div class="trend-card" data-city="Delhi">
+                                <video autoplay loop muted>
+                                    <source src="image/city6.mp4" type="video/mp4">
+                                </video>
+                                <h3>Delhi’s Ethnic Elegance</h3>
+                            </div>
+                        </a>
+                        <!-- Bangalore -->
+                        <a href="trends/bangalore.html" class="trend-link">
+                            <div class="trend-card" data-city="Bangalore">
+                                <video autoplay loop muted>
+                                    <source src="image/city13.mp4" type="video/mp4">
+                                </video>
+                                <h3>Bangalore’s Urban Chic</h3>
+                            </div>
+                        </a>
+                        <!-- Chennai -->
+                        <a href="trends/chennai.html" class="trend-link">
+                            <div class="trend-card" data-city="Chennai">
+                                <video autoplay loop muted>
+                                    <source src="image/city12.mp4" type="video/mp4">
+                                </video>
+                                <h3>Chennai’s Silk Swag!</h3>
+                            </div>
+                        </a>
+                        <!-- Kolkata -->
+                        <a href="trends/kolkata.html" class="trend-link">
+                            <div class="trend-card" data-city="Kolkata">
+                                <video autoplay loop muted>
+                                    <source src="image/city2.mp4" type="video/mp4">
+                                </video>
+                                <h3>Kolkata’s Boho Vibes </h3>
+                            </div>
+                        </a>
+                        <!-- Hyderabad -->
+                        <a href="trends/hyderabad.html" class="trend-link">
+                            <div class="trend-card" data-city="Hyderabad">
+                                <video autoplay loop muted>
+                                    <source src="image/city7.mp4" type="video/mp4">
+                                </video>
+                                <h3>Hyderabad’s Regal Glam </h3>
+                            </div>
+                        </a>
+                        <!-- Ahmedabad -->
+                        <a href="trends/ahmedabad.html" class="trend-link">
+                            <div class="trend-card" data-city="Ahmedabad">
+                                <video autoplay loop muted>
+                                    <source src="image/city8.mp4" type="video/mp4">
+                                </video>
+                                <h3>Ahmedabad’s Textile Revolution</h3>
+                            </div>
+                        </a>
+                        <!-- Jaipur -->
+                        <a href="trends/jaipur.html" class="trend-link">
+                            <div class="trend-card" data-city="Jaipur">
+                                <video autoplay loop muted>
+                                    <source src="image/city3.mp4" type="video/mp4">
+                                </video>
+                                <h3>Jaipur’s Royal Couture</h3>
+                            </div>
+                        </a>
+                        <!-- Goa -->
+                        <a href="trends/goa.html" class="trend-link">
+                            <div class="trend-card" data-city="Goa">
+                                <video autoplay loop muted>
+                                    <source src="image/city4.mp4" type="video/mp4">
+                                </video>
+                                <h3>Goa’s Beachside Fashion </h3>
+                            </div>
+                        </a>
+                        <!-- Varanasi -->
+                        <a href="trends/varanasi.html" class="trend-link">
+                            <div class="trend-card" data-city="Varanasi">
+                                <video autoplay loop muted>
+                                    <source src="image/city9.mp4" type="video/mp4">
+                                </video>
+                                <h3>Varanasi’s Banarasi Magic </h3>
+                            </div>
+                        </a>
+                        <!-- Surat -->
+                        <a href="trends/surat.html" class="trend-link">
+                            <div class="trend-card" data-city="Surat">
+                                <video autoplay loop muted>
+                                    <source src="image/city5.mp4" type="video/mp4">
+                                </video>
+                                <h3>Surat’s Fashion Hub </h3>
+                            </div>
+                        </a>
+                        <!-- Lucknow -->
+                        <a href="trends/lucknow.html" class="trend-link">
+                            <div class="trend-card" data-city="Lucknow">
+                                <video autoplay loop muted>
+                                    <source src="image/city10.mp4" type="video/mp4">
+                                </video>
+                                <h3>Lucknow’s Chikankari Charm!</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <style>
+                .section-header {
+                    text-align: center;
+                    color: #e50977;
+                    font-size: 28px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                }
+                
+                .trending-slider {
+                    display: flex;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    scroll-behavior: smooth;
+                    position: relative;
+                    padding: 10px 0;
+                }
+                
+                .slider-wrapper {
+                    display: flex;
+                    gap: 20px;
+                    animation: scroll 30s linear infinite;
+                }
+                
+                .trend-card {
+                    flex: 0 0 auto;
+                    width: 250px;
+                    border-radius: 15px;
+                    text-align: center;
+                    background: #fff;
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+                    padding: 15px;
+                    transition: transform 0.3s ease-in-out;
+                    cursor: pointer;
+                    border: 2px solid #1c0611e8;
+                }
+                
+                .trend-card:hover {
+                    transform: scale(1.07);
+                    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+                }
+                
+                .trend-link {
+                    text-decoration: none;
+                    color: inherit;
+                    display: inline-block;
+                }
+                
+                .trend-card video {
+                    width: 100%;
+                    height: 350px;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+                
+                .trend-card h3 {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: #e50977;
+                }
+                
+                @keyframes scroll {
+                    from {
+                        transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(-50%);
+                    }
+                }
+            </style>
+            
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const sliderWrapper = document.querySelector(".slider-wrapper");
+                    const cards = Array.from(sliderWrapper.children);
+                    cards.forEach(card => sliderWrapper.appendChild(card.cloneNode(true))); // Duplicate for smooth infinite scroll
+                });
+            </script>
+    
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRYZA Smart Fashion Hub</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .smart-fashion-container {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff;
+    }
+
+    .smart-fashion-title {
+      font-size: 32px;
+      font-weight: 700;
+      color: #d63384; /* TRYZA pink */
+      margin-bottom: 40px;
+    }
+
+    /* Feature Cards Section */
+    .feature-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      padding: 0 20px 60px;
+    }
+
+    .feature-card {
+      position: relative;
+      height: 350px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: #fff;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      transition: transform 0.4s ease;
+    }
+
+    .feature-card:hover .feature-image {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+      z-index: 1;
+    }
+
+    .feature-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      color: #fff;
+      z-index: 2;
+      text-align: left;
+    }
+
+    .feature-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .feature-description {
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .feature-button {
+      display: inline-block;
+      background-color: #ffffff;
+      color: #111;
+      padding: 10px 18px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .feature-button:hover {
+      background-color: #111;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .feature-card {
+        height: 300px;
+      }
+
+      .feature-title {
+        font-size: 1.1rem;
+      }
+
+      .feature-description {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="smart-fashion-container">
+    <h2 class="smart-fashion-title">TRYZA Smart Fashion Hub – AI-Powered Styling & Shopping</h2>
+
+    <div class="feature-section">
+      <!-- Feature Card 1 -->
+      <div class="feature-card" onclick="openFeature('celebrity-look.html')">
+        <img src="image/2 12.08.41 AM.png" alt="Celebrity Look" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">Influencer & Celebrity Look Duplication</div>
+          <div class="feature-description">Recreate iconic outfits with ease.</div>
+          <a href="celebrity-look.html" class="feature-button">Try Now</a>
+        </div>
+      </div>
+
+      <!-- Feature Card 2 -->
+      <div class="feature-card" onclick="openFeature('fashion-ai.html')">
+        <img src="image/4 12.08.41 AM.png" alt="Fashion AI" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">Personal Fashion AI Assistant (TRYZA GPT)</div>
+          <div class="feature-description">Get AI-powered fashion advice instantly.</div>
+          <a href="fashion-ai.html" class="feature-button">Ask AI</a>
+        </div>
+      </div>
+
+      <!-- Feature Card 3 -->
+      <div class="feature-card" onclick="openFeature('closet-organizer.html')">
+        <img src="image/5 12.08.41 AM.png" alt="Closet Organizer" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">AI-Driven Closet Organizer</div>
+          <div class="feature-description">Digitally organize and optimize your wardrobe.</div>
+          <a href="closet-organizer.html" class="feature-button">Organize Now</a>
+        </div>
+      </div>
+
+      <!-- Feature Card 4 -->
+      <div class="feature-card" onclick="openFeature('mood-picks.html')">
+        <img src="image/3 12.08.41 AM.png" alt="Mood Picks" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">Mood-Based Fashion Picks</div>
+          <div class="feature-description">Outfits tailored to how you feel today.</div>
+          <a href="mood-picks.html" class="feature-button">Explore</a>
+        </div>
+      </div>
+
+      <!-- Feature Card 5 -->
+      <div class="feature-card" onclick="openFeature('fashion-challenges.html')">
+        <img src="image/7 12.08.41 AM.png" alt="Fashion Challenges" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">TRYZA Fashion Challenges & Rewards</div>
+          <div class="feature-description">Join challenges & win exclusive prizes.</div>
+          <a href="fashion-challenges.html" class="feature-button">Participate</a>
+        </div>
+      </div>
+
+      <!-- Feature Card 6 -->
+      <div class="feature-card" onclick="openFeature('outfit-pairing.html')">
+        <img src="image/8 12.08.41 AM.png" alt="Outfit Pairing" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">Smart Outfit Pairing</div>
+          <div class="feature-description">AI-powered outfit matching made easy.</div>
+          <a href="outfit-pairing.html" class="feature-button">Discover</a>
+        </div>
+      </div>
+
+      <!-- Feature Card 7 -->
+      <div class="feature-card" onclick="openFeature('budget-picks.html')">
+        <img src="image/1 12.08.41 AM.png" alt="Budget Picks" class="feature-image">
+        <div class="overlay"></div>
+        <div class="feature-content">
+          <div class="feature-title">Style Steals – Trendy Picks on a Budget</div>
+          <div class="feature-description">Look fabulous without overspending.</div>
+          <a href="budget-picks.html" class="feature-button">Shop Smart</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openFeature(url) {
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
+<h2 class="smart-fashion-title">In collaboration with leading fashion platforms</h2>
+
+<div class="branding-section">
+  <div class="branding-track">
+    <a href="https://www.meesho.com" target="_blank"><img src="image/b1.png" alt="Meesho"></a>
+    <a href="https://www.myntra.com" target="_blank"><img src="image/b2.png" alt="Myntra"></a>
+    <a href="https://www.amazon.in" target="_blank"><img src="image/b3.png" alt="Amazon"></a>
+    <a href="https://www.ajio.com" target="_blank"><img src="image/b4.png" alt="Ajio"></a>
+    <a href="https://www.nykaa.com" target="_blank"><img src="image/b5.png" alt="Nykaa"></a>
+    <a href="https://www.westside.com" target="_blank"><img src="image/b7.png" alt="Westside"></a>
+    <a href="https://www.maxfashion.in" target="_blank"><img src="image/b6.png" alt="Max"></a>
+    <a href="https://www.hnm.com" target="_blank"><img src="image/b8.png" alt="H&M"></a>
+    <a href="https://www.zara.com" target="_blank"><img src="image/b9.png" alt="Zara"></a>
+    <a href="https://www.flipkart.com" target="_blank"><img src="image/b10.png" alt="Flipkart"></a>
+    <a href="https://www.limeroad.com" target="_blank"><img src="image/b11.png" alt="LimeRoad"></a>
+    <a href="https://www.snapdeal.com" target="_blank"><img src="image/b12.png" alt="Snapdeal"></a>
+    <a href="https://www.bewakoof.com" target="_blank"><img src="image/b13.png" alt="Bewakoof"></a>
+    <a href="https://www.tatacliq.com" target="_blank"><img src="image/b15.png" alt="TataCliq"></a>
+    <a href="https://www.pantaloons.com" target="_blank"><img src="image/b14.png" alt="Pantaloons"></a>
+  </div>
+</div>
+<style>
+    .branding-section {
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #fff;
+}
+
+.branding-track {
+  display: flex;
+  width: calc(250px * 32);
+  animation: scrollBrands 30s linear infinite;
+}
+
+.branding-track a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 120px;
+  padding: 10px;
+}
+
+.branding-track img {
+  max-height: 80px;
+  max-width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.branding-track img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollBrands {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Make the heading align with branding layout */
+.smart-fashion-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #d63384;
+  margin-bottom: 30px;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TRYZA Accessories Virtual Try-On</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdf8fd;
+    }
+
+    .accessories-section {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fdf8fd;
+    }
+
+    .section-title {
+      font-size: 32px;
+      color: #d63384;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    .accessories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      perspective: 1000px;
+    }
+
+    .accessory-card {
+      width: 100%;
+      max-width: 260px;
+      height: 340px;
+      perspective: 1200px;
+      cursor: pointer;
+    }
+
+    .accessory-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+
+    .accessory-card:hover .accessory-inner {
+      transform: rotateY(180deg) scale(1.05);
+    }
+
+    .accessory-front,
+    .accessory-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      transition: all 0.5s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .accessory-front {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .accessory-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      transition: transform 0.4s ease;
+    }
+
+    .accessory-card:hover .accessory-front img {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    .accessory-front h3 {
+      color: #222;
+      font-size: 1.2rem;
+      margin-top: auto;
+    }
+
+    .accessory-back {
+      background: #d63384;
+      color: #fff;
+      transform: rotateY(180deg);
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .accessory-back p {
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .try-btn {
+      background: #fff;
+      color: #d63384;
+      padding: 10px 16px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .try-btn:hover {
+      background: #222;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Accessories Virtual Try-On Section -->
+  <section class="accessories-section">
+    <h2 class="section-title">TRYZA Accessories Virtual Try-On</h2>
+    <p class="section-subtitle">Try on watches, sunglasses, jewelry, shoes, and more in real-time!</p>
+
+    <div class="accessories-grid">
+      <!-- Watch -->
+      <div class="accessory-card">
+        <div class="accessory-inner">
+          <div class="accessory-front">
+            <img src="image/a1.png" alt="Watch">
+            <h3>Watches</h3>
+          </div>
+          <div class="accessory-back">
+            <p>Try smart and analog watches live on your wrist with our AR engine!</p>
+            <a href="#" class="try-btn">Try Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sunglasses -->
+      <div class="accessory-card">
+        <div class="accessory-inner">
+          <div class="accessory-front">
+            <img src="image/a2.png" alt="Sunglasses">
+            <h3>Sunglasses</h3>
+          </div>
+          <div class="accessory-back">
+            <p>Pick the right frame for your face shape in real time.</p>
+            <a href="#" class="try-btn">Try Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Jewellery -->
+      <div class="accessory-card">
+        <div class="accessory-inner">
+          <div class="accessory-front">
+            <img src="image/a3.png" alt="Jewellery">
+            <h3>Jewellery</h3>
+          </div>
+          <div class="accessory-back">
+            <p>Try earrings, necklaces, and more before buying.</p>
+            <a href="#" class="try-btn">Try Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Shoes -->
+      <div class="accessory-card">
+        <div class="accessory-inner">
+          <div class="accessory-front">
+            <img src="image/a5.png" alt="Shoes">
+            <h3>Shoes mens </h3>
+          </div>
+          <div class="accessory-back">
+            <p>Check how your shoes fit your look — from sneakers to formal.</p>
+            <a href="#" class="try-btn">Try Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="accessory-card">
+        <div class="accessory-inner">
+          <div class="accessory-front">
+            <img src="image/a4.png" alt="Shoes">
+            <h3>Shoes womens</h3>
+          </div>
+          <div class="accessory-back">
+            <p>Check how your shoes fit your look — from sneakers to heels.</p>
+            <a href="#" class="try-btn">Try Now</a>
+          </div>
+        </div>
+      </div>
+
+
+</body>
+</html>

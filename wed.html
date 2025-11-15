@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Wardrobe - TRYZA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('image3/back.1.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.6);
+            z-index: 1;
+        }
+        .wedding-section {
+            position: relative;
+            text-align: center;
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 40px;
+            z-index: 2;
+        }
+        .section-header h1 {
+            font-size: 36px;
+            color: #8B5E3C;
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-categories {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        .category {
+            text-align: center;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .category img {
+            width: 100%;
+            height: 280px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 3px solid #ffedd5;
+        }
+        .category h2 {
+            margin-top: 12px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #8B5E3C;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <section class="wedding-section">
+        <div class="section-header">
+            <h1>Wedding Wardrobe – Shaadi Ka Swag♥️</h1>
+        </div>
+        <div class="virtual-stylist">
+            <a href="virtual-stylist.html">✨ Virtual Stylist ✨</a>
+            <span class="tagline">- Your AI-powered fashion assistant</span>
+        </div>
+        <div class="section-categories">
+            <a href="bridegroomhtml.html" class="category">
+                <img src="image3/wed.1.png" alt="Bride and Groom">
+                <h2>Bride & Groom</h2>
+            </a>
+            <a href="haldi-mehendi.html" class="category">
+                <img src="image3/wed.2.png" alt="Haldi & Mehendi">
+                <h2>Haldi & Mehendi</h2>
+            </a>
+            <a href="sangeet-cocktail.html" class="category">
+                <img src="image3/wed.3.png" alt="Sangeet and Cocktail">
+                <h2>Sangeet & Cocktail</h2>
+            </a>
+            <a href="ceremony.html" class="category">
+                <img src="image3/wed4.png" alt="Pheras and Ceremony">
+                <h2>Pheras & Ceremony</h2>
+            </a>
+            <a href="reception.html" class="category">
+                <img src="image3/wed.5.png" alt="Reception">
+                <h2>Reception & After-Party</h2>
+            </a>
+            <a href="shaadi-squad.html" class="category">
+                <img src="image3/wed.6.png" alt="Shaadi Squad Styles">
+                <h2>💃 Shaadi Squad Styles - Match It, Slay It! 🎩</h2>
+            </a>
+            <a href="pre-wedding.html" class="category">
+                <img src="image3/wed.7.png" alt="Pre-Wedding Shoot">
+                <h2>Pre-Wedding Shoot</h2>
+            </a>
+        </div>
+    </section>
+</body>
+</html>
